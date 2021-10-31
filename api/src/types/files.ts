@@ -18,4 +18,5 @@ export type File = {
 	location: string | null;
 	tags: string | null;
 	metadata: Record<string, any> | null;
+	imported_from: string | null;
 };

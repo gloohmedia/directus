@@ -172,6 +172,7 @@ export class FilesService extends ItemsService {
 			storage: toArray(env.STORAGE_LOCATIONS)[0],
 			type: fileResponse.headers['content-type'],
 			title: formatTitle(filename),
+			imported_from: importURL,
 			...(body || {}),
 		};
 
