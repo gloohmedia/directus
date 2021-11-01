@@ -136,3 +136,8 @@ fields:
   - field: duration
     width: half
     readonly: true
+
+  - field: imported_from
+    interface: input
+    readonly: true
+    width: full
