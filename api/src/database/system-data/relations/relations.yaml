@@ -82,3 +82,6 @@ data:
   - many_collection: directus_panels
     many_field: user_created
     one_collection: directus_users
+  - many_collection: directus_collections
+    many_field: group
+    one_collection: directus_collections
