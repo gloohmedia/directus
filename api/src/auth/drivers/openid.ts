@@ -58,7 +58,6 @@ export class OpenIDAuthDriver extends LocalAuthDriver {
 			const client = await this.client;
 			return client.authorizationUrl({
 				scope: this.config.scope ?? 'openid profile email',
-				state: this.config.state ?? 'false',
 				code_challenge: generators.codeChallenge(codeVerifier),
 				code_challenge_method: 'S256',
 				access_type: 'offline',

@@ -57,7 +57,6 @@ export class OAuth2AuthDriver extends LocalAuthDriver {
 		try {
 			return this.client.authorizationUrl({
 				scope: this.config.scope ?? 'email',
-				state: this.config.state ?? 'false',
 				code_challenge: generators.codeChallenge(codeVerifier),
 				code_challenge_method: 'S256',
 				access_type: 'offline',
