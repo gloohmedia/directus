@@ -65,9 +65,10 @@ export default class Oracle extends KnexOracle implements SchemaInspector {
 				"ct"."CONSTRAINT_TYPE" "column_key",
 				"c"."CHAR_LENGTH" "max_length",
 				"c"."VIRTUAL_COLUMN" "is_generated"
-			FROM "USER_TAB_COLUMNS" "c"
+			FROM "USER_TAB_COLS" "c"
 			LEFT JOIN "uc" "ct" ON "c"."TABLE_NAME" = "ct"."TABLE_NAME"
 				AND "c"."COLUMN_NAME" = "ct"."COLUMN_NAME"
+			WHERE "c"."HIDDEN_COLUMN" = 'NO'
 		`);
 
 		const overview: SchemaOverview = {};
